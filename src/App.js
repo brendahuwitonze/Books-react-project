@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Book from "./Book"
+import MasteringReact from './mastering react.svg';
+import PracticalReact from './practical react.svg';
+import ReactInAction from './react in action.svg';
+import './style.css';
+
+export default function App(){
+    return (
+        <>
+        <main className="mainbooks">
+            <h1>Favorite Books</h1>
+            <div className="book-list">
+            <Book 
+            title ="Mastering React" 
+            author="Anthony Pham"
+            cover ={MasteringReact}
+            />
+            <Book 
+            title= "practical React" 
+            author="Alex Johnson"
+            cover={PracticalReact}
+            />
+            <Book 
+            title="React in Action"
+             author="Bob Climo"
+             cover={ReactInAction}
+             />
+            </div>
+            </main>
+        </>
+    )
 }
-
-export default App;
